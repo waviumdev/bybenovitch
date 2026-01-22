@@ -15,8 +15,8 @@
     <div class="container">
       <div class="card">
         <div class="kicker">Contact</div>
-        <h1>Me contacter</h1>
-        <p>Le plus simple : un message clair, et je te réponds avec les prochaines étapes.</p>
+        <h1>Entrer en contact</h1>
+        <p>Un message simple suffit. Réponse avec une proposition claire et les prochaines étapes.</p>
 
         <div class="cta">
           <a class="btn primary" href="mailto:contact@bybenovitch.com">Écrire un email</a>
@@ -33,36 +33,39 @@
   <section class="section">
     <div class="container">
       <div class="card">
-        <div class="kicker">Formulaire</div>
-        <h2>Envoyer un message</h2>
-        <p class="smallnote">Formulaire prêt — branchement Bravo/Mailchimp à venir.</p>
+        <div class="kicker">Message</div>
+        <h2>Formulaire</h2>
+        <p class="smallnote">Disponible prochainement (branchement Bravo / Mailchimp en cours).</p>
 
-        <form class="form" action="#" method="post" onsubmit="return false;">
+        <form class="form" action="#" method="post" onsubmit="return false;" aria-disabled="true">
           <div class="grid2">
             <label>
               <span>Nom</span>
-              <input type="text" name="name" placeholder="Ton nom" autocomplete="name" />
+              <input type="text" name="name" placeholder="Nom" autocomplete="name" />
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="ton@email.com" autocomplete="email" />
+              <input type="email" name="email" placeholder="email@domaine.com" autocomplete="email" />
             </label>
           </div>
 
           <label>
             <span>Message</span>
-            <textarea name="message" rows="6" placeholder="Décris ton besoin, ton délai, ton lien de référence…"></textarea>
+            <textarea name="message" rows="6" placeholder="Contexte, lien(s), délai, références…"></textarea>
           </label>
 
           <div class="cta">
             <button class="btn primary" type="submit" disabled title="Bientôt disponible">Envoyer (bientôt)</button>
             <a class="btn" href="../about/">À propos</a>
           </div>
+
+          <p class="smallnote" style="margin-top:10px;">
+            Pour l’instant, l’envoi se fait par email.
+          </p>
         </form>
       </div>
     </div>
   </section>
-
 
   <div id="bb-footer"></div>
 </body>
