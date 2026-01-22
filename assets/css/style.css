@@ -32,8 +32,8 @@ html,body{height:100%}
 html{
   min-height:100%;
   background:
-    radial-gradient(1000px 520px at 15% 0%, rgba(42,99,255,.22), transparent 60%),
-    radial-gradient(900px 520px at 85% 10%, rgba(30,58,95,.22), transparent 55%),
+    radial-gradient(1000px 520px at 15% 0%, rgba(143,155,179,.16), transparent 60%),
+    radial-gradient(900px 520px at 85% 10%, rgba(255,255,255,.06), transparent 55%),
     var(--bg);
   background-repeat:no-repeat;
   background-attachment:fixed;
@@ -156,10 +156,11 @@ a:hover{opacity:.92}
 
 /* Hero card */
 .hero .card{
-  background: linear-gradient(180deg, rgba(42,99,255,.14), rgba(16,18,20,.96));
+  background: linear-gradient(180deg, rgba(143,155,179,.10), rgba(16,18,20,.96));
   border:1px solid rgba(255,255,255,.12);
   box-shadow:var(--shadow);
 }
+
 
 .hero h1{font-size:2.2rem}
 .hero .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
