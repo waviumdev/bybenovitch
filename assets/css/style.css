@@ -319,3 +319,69 @@ button[disabled]{
 .reveal.is-visible{
   opacity: 1;
 }
+
+/* ===== Premium sheen (subtle reflection) ===== */
+
+.hubcard{
+  position: relative;
+  overflow: hidden; /* important pour couper le reflet */
+}
+
+/* Base sheen */
+.hubcard::after{
+  content:"";
+  position:absolute;
+  inset:-40% -60%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,.08) 50%,
+    transparent 60%
+  );
+  opacity:0;
+  transform: translateX(-60%) rotate(8deg);
+  transition:
+    transform 700ms var(--ease),
+    opacity 300ms ease;
+  pointer-events:none;
+}
+
+/* Hover trigger */
+.hubcard:hover::after{
+  opacity:1;
+  transform: translateX(60%) rotate(8deg);
+}
+/* Playlist — violet */
+.hubcard.playlist::after{
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(176,38,255,.18) 50%,
+    transparent 60%
+  );
+}
+
+/* Studio — bleu */
+.hubcard.studio::after{
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(42,99,255,.18) 50%,
+    transparent 60%
+  );
+}
+
+/* Artists — rouge */
+.hubcard.artists::after{
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(239,68,68,.18) 50%,
+    transparent 60%
+  );
+}
+@media (prefers-reduced-motion: reduce){
+  .hubcard::after{
+    display:none;
+  }
+}
