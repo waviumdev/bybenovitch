@@ -351,37 +351,67 @@ button[disabled]{
   opacity:1;
   transform: translateX(60%) rotate(8deg);
 }
-/* Playlist — violet */
+/* Playlist — violet (plus subtil) */
 .hubcard.playlist::after{
   background: linear-gradient(
     120deg,
-    transparent 40%,
-    rgba(176,38,255,.18) 50%,
-    transparent 60%
+    transparent 42%,
+    rgba(176,38,255,.10) 50%,
+    transparent 58%
   );
 }
 
-/* Studio — bleu */
+/* Studio — bleu (plus subtil) */
 .hubcard.studio::after{
   background: linear-gradient(
     120deg,
-    transparent 40%,
-    rgba(42,99,255,.18) 50%,
-    transparent 60%
+    transparent 42%,
+    rgba(42,99,255,.10) 50%,
+    transparent 58%
   );
 }
 
-/* Artists — rouge */
+/* Artists — rouge (plus subtil) */
 .hubcard.artists::after{
   background: linear-gradient(
     120deg,
-    transparent 40%,
-    rgba(239,68,68,.18) 50%,
-    transparent 60%
+    transparent 42%,
+    rgba(239,68,68,.10) 50%,
+    transparent 58%
   );
 }
+
 @media (prefers-reduced-motion: reduce){
   .hubcard::after{
     display:none;
   }
 }
+
+/* Subtle sheen for standard cards (navy, very light) */
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:-50% -70%;
+  background: linear-gradient(
+    120deg,
+    transparent 44%,
+    rgba(42,51,71,.20) 50%,
+    transparent 56%
+  );
+  opacity:0;
+  transform: translateX(-70%) rotate(10deg);
+  transition: transform 700ms var(--ease), opacity 240ms ease;
+  pointer-events:none;
+}
+
+.card:hover::after,
+.card:focus-within::after{
+  opacity:1;
+  transform: translateX(70%) rotate(10deg);
+}
+
