@@ -302,12 +302,20 @@ button[disabled]{
 /* Subtle reveal on scroll (premium, light) */
 .reveal{
   opacity: 0;
-  transform: translateY(8px);
   transition: opacity 420ms var(--ease), transform 420ms var(--ease);
   will-change: opacity, transform;
 }
 
+/* Prefer translate (no conflict with hover transform) */
+@supports (translate: 0 0){
+  .reveal{ translate: 0 8px; transform: none; }
+  .reveal.is-visible{ translate: 0 0; }
+}
+@supports not (translate: 0 0){
+  .reveal{ transform: translateY(8px); }
+  .reveal.is-visible{ transform: translateY(0); }
+}
+
 .reveal.is-visible{
   opacity: 1;
-  transform: translateY(0);
 }
