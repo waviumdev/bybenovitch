@@ -80,7 +80,7 @@
     highlightBrand();
     highlightLocalNav();
     headerScrollEffect();
-    document.body.classList.add("is-ready");
+   
     setTimeout(() => document.body.classList.add("is-ready"), 800);
 
   })();
