@@ -75,5 +75,7 @@
     await inject("#bb-footer", "footer.html");
     highlightBrand();
     highlightLocalNav();
+    headerScrollEffect();
+
   })();
 })();
