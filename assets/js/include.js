@@ -58,7 +58,17 @@
     const active = document.querySelector(`.navlink[data-nav="${pick}"]`);
     if (active) active.classList.add("active");
   }
+  function headerScrollEffect() {
+    const header = document.querySelector(".header");
+    if (!header) return;
 
+    const onScroll = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 6);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
   (async function main() {
     await inject("#bb-brandbar", "brandbar.html");
     await inject("#bb-hubheader", "hubheader.html");
