@@ -518,3 +518,77 @@ html.js body.is-ready{
   border-color: rgba(239,68,68,.35);
   background: rgba(239,68,68,.06);
 }
+/* Page theme: Artists (accent rouge sur /artists/*) */
+.theme-artists{
+  --accent: var(--artists);
+  --accent2: rgba(239,68,68,.18);
+}
+
+/* Pricing meters */
+.meter .meter-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.status{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-size:.86rem;
+  color:var(--paper);
+  white-space:nowrap;
+}
+
+.status.open{
+  background: rgba(16, 185, 129, .12); /* green-ish */
+  border-color: rgba(16, 185, 129, .28);
+}
+
+.status.tight{
+  background: rgba(245, 158, 11, .12); /* amber-ish */
+  border-color: rgba(245, 158, 11, .28);
+}
+
+.status.wait{
+  background: rgba(239, 68, 68, .12); /* red-ish */
+  border-color: rgba(239, 68, 68, .28);
+}
+
+.status.soon{
+  background: rgba(143,155,179,.10);
+  border-color: rgba(143,155,179,.22);
+  color: rgba(255,255,255,.72);
+}
+
+.bar{
+  margin-top:12px;
+  height:10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background: linear-gradient(90deg, rgba(143,155,179,.45), rgba(255,255,255,.18));
+}
+
+.theme-artists .fill{
+  background: linear-gradient(90deg, rgba(239,68,68,.42), rgba(239,68,68,.14));
+}
+
+.meter .meter-bottom{
+  margin-top:10px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
