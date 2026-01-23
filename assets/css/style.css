@@ -205,7 +205,17 @@ button[disabled]{
   font-size:1.05rem;
   line-height:1.5;
 }
+.hero h1{
+  opacity: 0;
+  transform: translateY(6px);
+  letter-spacing: .02em;
+  transition: opacity 320ms var(--ease), transform 320ms var(--ease);
+}
 
+body.is-ready .hero h1{
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Service list */
 .service{
   padding:18px 0;
