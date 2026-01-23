@@ -415,3 +415,21 @@ button[disabled]{
   transform: translateX(70%) rotate(10deg);
 }
 
+.header::before{
+  content:"";
+  position:absolute;
+  inset:-20px 0 auto 0;
+  height:60px;
+  background: radial-gradient(
+    600px 40px at 50% 0%,
+    rgba(143,155,179,.10),
+    transparent 70%
+  );
+  opacity:.6;
+  pointer-events:none;
+  z-index:-1;
+}
+.header.is-scrolled{
+  background: rgba(10,10,10,.92);
+  backdrop-filter: blur(10px);
+}
