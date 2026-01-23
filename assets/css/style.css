@@ -209,7 +209,7 @@ button[disabled]{
   opacity: 0;
   transform: translateY(6px);
   letter-spacing: .02em;
-  transition: opacity 320ms var(--ease), transform 320ms var(--ease);
+  transition: opacity 480ms var(--ease), transform 480ms var(--ease);
 }
 
 body.is-ready .hero h1{
