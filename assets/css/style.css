@@ -445,3 +445,14 @@ body.is-ready{
 @media (prefers-reduced-motion: reduce){
   body{ opacity: 1; transition: none; }
 }
+/* Page enter (subtle) — only when JS is active */
+html.js body{
+  opacity: 0;
+  transition: opacity 260ms var(--ease);
+}
+html.js body.is-ready{
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce){
+  html.js body{ opacity: 1; transition: none; }
+}
