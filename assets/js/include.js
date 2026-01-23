@@ -74,14 +74,23 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
   (async function main() {
-    await inject("#bb-brandbar", "brandbar.html");
-    await inject("#bb-hubheader", "hubheader.html");
-    await inject("#bb-footer", "footer.html");
-    highlightBrand();
-    highlightLocalNav();
-    headerScrollEffect();
-   
-    setTimeout(() => document.body.classList.add("is-ready"), 800);
+    // Fallback: même si un fetch bloque, on n’affiche pas un écran noir
+    const failSafe = setTimeout(() => {
+      document.body.classList.add("is-ready");
+    }, 700);
 
+    try {
+      await inject("#bb-brandbar", "brandbar.html");
+      await inject("#bb-hubheader", "hubheader.html");
+      await inject("#bb-footer", "footer.html");
+
+      highlightBrand();
+      highlightLocalNav();
+      headerScrollEffect(); // si tu l’as ajouté
+    } finally {
+      clearTimeout(failSafe);
+      document.body.classList.add("is-ready");
+    }
   })();
+
 })();
