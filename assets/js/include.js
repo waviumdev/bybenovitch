@@ -64,8 +64,12 @@
 
     const onScroll = () => {
       header.classList.toggle("is-scrolled", window.scrollY > 6);
-    };
+  
 
+    };
+   
+
+    
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
@@ -76,6 +80,8 @@
     highlightBrand();
     highlightLocalNav();
     headerScrollEffect();
+    document.body.classList.add("is-ready");
+    setTimeout(() => document.body.classList.add("is-ready"), 800);
 
   })();
 })();
