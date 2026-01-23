@@ -466,3 +466,55 @@ html.js body.is-ready{
 @media (prefers-reduced-motion: reduce){
   html.js body{ opacity: 1; transition: none; }
 }
+/* Brandbar: colored hover per destination (subtle) */
+.brandbar .pill{
+  transition: transform 120ms var(--ease),
+              border-color 160ms var(--ease),
+              background 160ms var(--ease),
+              color 160ms var(--ease);
+}
+
+/* Playlist */
+.brandbar .pill[data-active="playlist"]:hover{
+  border-color: rgba(176,38,255,.55);
+  background: rgba(176,38,255,.10);
+  color: rgba(176,38,255,.95);
+}
+
+/* Studio */
+.brandbar .pill[data-active="studio"]:hover{
+  border-color: rgba(42,99,255,.55);
+  background: rgba(42,99,255,.10);
+  color: rgba(42,99,255,.95);
+}
+
+/* Artists */
+.brandbar .pill[data-active="artists"]:hover{
+  border-color: rgba(239,68,68,.55);
+  background: rgba(239,68,68,.10);
+  color: rgba(239,68,68,.95);
+}
+
+/* Maison / Hub (si tu as un pill maison) */
+.brandbar .pill[data-active="home"]:hover,
+.brandbar .pill[data-active="maison"]:hover{
+  border-color: rgba(143,155,179,.45);
+  background: rgba(143,155,179,.08);
+  color: rgba(245,245,242,.95);
+}
+.brandbar .pill.active{
+  background: rgba(255,255,255,.06);
+}
+
+.brandbar .pill[data-active="playlist"].active{
+  border-color: rgba(176,38,255,.35);
+  background: rgba(176,38,255,.06);
+}
+.brandbar .pill[data-active="studio"].active{
+  border-color: rgba(42,99,255,.35);
+  background: rgba(42,99,255,.06);
+}
+.brandbar .pill[data-active="artists"].active{
+  border-color: rgba(239,68,68,.35);
+  background: rgba(239,68,68,.06);
+}
