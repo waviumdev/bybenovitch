@@ -433,3 +433,15 @@ button[disabled]{
   background: rgba(10,10,10,.92);
   backdrop-filter: blur(10px);
 }
+/* Page enter (subtle) */
+body{
+  opacity: 0;
+  transition: opacity 260ms var(--ease);
+}
+
+body.is-ready{
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce){
+  body{ opacity: 1; transition: none; }
+}
