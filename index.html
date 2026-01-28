@@ -3,132 +3,164 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>By Benovitch</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <script>
-  document.documentElement.classList.add('js');
-</script>
-  <script defer src="./assets/js/include.js"></script>
-  <script defer src="./assets/js/reveal.js"></script>
-</head>
-<body>
-  <div id="bb-brandbar"></div>
-  <div id="bb-hubheader"></div>
+  <title>By Benovitch — Playlists</title>
 
+  <!-- Empêche l'indexation pendant la phase de dev -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <style>
+    /* Mini CSS d'appoint pour une grille d'embeds responsive,
+       sans toucher à ton style.css */
+    .spotify-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .spotify-card{
+      grid-column: span 12;
+      overflow: hidden;
+    }
+    @media (min-width: 800px){
+      .spotify-card{ grid-column: span 6; }
+    }
+    @media (min-width: 1100px){
+      .spotify-card{ grid-column: span 4; }
+    }
+
+    .spotify-embed{
+      width:100%;
+      height: 380px;
+      border:0;
+      border-radius: 16px;
+      display:block;
+    }
+    .muted{
+      opacity:.85;
+    }
+  </style>
+</head>
+
+<body>
   <!-- HERO -->
   <section class="section hero">
     <div class="container">
-      <div class="card reveal">
-        <div class="kicker">Accueil</div>
-        <h1>By Benovitch</h1>
+      <div class="card">
+        <div class="kicker">By Benovitch</div>
+        <h1>Playlists</h1>
 
-        <p class="hero-subtitle">
-          Un écosystème organisé autour de la création, de la production et de la diffusion musicale.
+        <p class="hero-subtitle muted">
+         Rap Certifié Conforme
         </p>
 
-       
-
         <div class="cta">
-          <a class="btn primary" href="#ecosysteme">Découvrir l’écosystème</a>
-          <a class="btn" href="./contact/">Me contacter</a>
+          <a class="btn primary" href="#playlists">Écouter</a>
+          <a class="btn" href="mailto:contact@bybenovitch.com">contact@bybenovitch.com</a>
         </div>
-    
       </div>
     </div>
   </section>
 
-  <!-- ECOSYSTEM -->
-  <section id="ecosysteme" class="section">
+  <!-- PLAYLISTS -->
+  <section id="playlists" class="section">
     <div class="container">
-      <div class="sectionhead reveal">
-        <h2>L’écosystème</h2>
-        <p>Trois espaces distincts, chacun avec un rôle précis.</p>
+      <div class="sectionhead">
+        <h2>À l’écoute</h2>
+        <p>Playlists Spotify intégrées.</p>
       </div>
 
-      <div class="hubgrid">
-        <div class="hubcard playlist reveal">
-          <div class="kicker">Playlists</div>
-          <h3>Diffusion</h3>
-          <p>Un espace consacré à la mise en circulation des projets musicaux.</p>
-
-          <div class="tags">
-            <span class="tag">Mise en avant</span>
-            <span class="tag">curation</span>
-            <span class="tag">Réseaux</span>
-          </div>
-          <a class="btn" href="https://playlist.bybenovitch.com">Aller aux Playlists</a>
+      <div class="spotify-grid">
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/4afejAuRDd5nVY9SvxwGBC"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 1"
+          ></iframe>
         </div>
 
-        <div class="hubcard studio reveal">
-          <div class="kicker">Studio</div>
-          <h3>Production</h3>
-          <p>Un cadre de production pour concevoir et optimiser des projets propres et cohérents.</p>
-
-          <div class="tags">
-            <span class="tag">Distribution</span>
-            <span class="tag">mix / master</span>
-            <span class="tag">identité</span>
-          </div>
-          <a class="btn" href="https://studio.bybenovitch.com">Aller au Studio</a>
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/6gmcgYR6zS5AAexXob03BJ"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 2"
+          ></iframe>
         </div>
 
-        <div class="hubcard artists reveal">
-          <div class="kicker">Artists</div>
-          <h3>Artists</h3>
-          <p>Un espace en développement, pensé pour structurer la relation entre artistes et publics.</p>
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/3Sc34uJLVTQqSFbr4anFN8"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 3"
+          ></iframe>
+        </div>
 
-          <div class="tags">
-            <span class="tag">outils</span>
-            <span class="tag">workflow</span>
-            <span class="tag">à venir</span>
-          </div>
-          <a class="btn" href="https://bybenovitch.com/artists/">Aller aux Artists</a>
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/0ZVthfcbDExElS7pWy7wTe"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 4"
+          ></iframe>
+        </div>
+
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/0jUTsdhloKpILXH3LcPwJz"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 5"
+          ></iframe>
+        </div>
+
+        <div class="card spotify-card">
+          <iframe
+            class="spotify-embed"
+            src="https://open.spotify.com/embed/playlist/2wojWFUAXWc3VRTWtLVlbD"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist 6"
+          ></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- METHOD -->
+  <!-- CONTACT -->
   <section class="section">
     <div class="container">
-      <div class="sectionhead reveal">
-        <h2>Un cadre de travail</h2>
-        <p>Clair, structuré, sans superflu.</p>
-      </div>
-
-      <div class="grid3">
-        <div class="card reveal">
-          <h3>Clarté</h3>
-          <p>Des objectifs définis et un périmètre assumé.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Exécution</h3>
-          <p>Des livrables propres et une organisation lisible.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Continuité</h3>
-          <p>Un suivi cohérent, sans dispersion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card reveal">
+      <div class="card">
         <div class="kicker">Contact</div>
-        <h2>Entrer en contact</h2>
-        <p>Pour un échange, une question ou une collaboration potentielle.</p>
+        <h2>Un mot, une collab, une question</h2>
+        <p class="muted">
+          Écris-moi directement :
+          <a href="mailto:contact@bybenovitch.com">contact@bybenovitch.com</a>
+        </p>
 
         <div class="cta">
-          <a class="btn primary" href="./contact/">Me contacter</a>
-          <a class="btn" href="./about/">En savoir plus</a>
+          <a class="btn primary" href="mailto:contact@bybenovitch.com">Envoyer un email</a>
+          <a class="btn" href="#playlists">Retour aux playlists</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div id="bb-footer"></div>
+  <!-- Petit footer minimal -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <p class="muted" style="margin:0;">© By Benovitch</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
